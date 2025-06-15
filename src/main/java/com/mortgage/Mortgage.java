@@ -12,8 +12,6 @@
  */
 package com.mortgage;
 
-
-
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.YearMonth;
@@ -49,7 +47,7 @@ public class Mortgage {
 		maturityDate = ym.atDay(1);
 	}
 	
-	/** Getters */
+	//Section Start:Getters
 
 	// Get balance
 	public double getBalance() {
@@ -80,8 +78,9 @@ public class Mortgage {
 	public double getTotalPayment() {
 	    return getPayment() + getEscrow();
 	}
+	//Section End 
 	
-	/** Setters */
+	//Section Start:Setters
 
 	// Set balance
 	public void setBalance(double newBalance) {
@@ -108,6 +107,7 @@ public class Mortgage {
 	    YearMonth ym = YearMonth.parse(newMaturityDate, maturityDateFormatter);
 	    this.maturityDate = ym.atDay(1);
 	}
+	//Section End
 	
 	//Calculates and returns total number of payments left
 	public long NumberOfPayments() {

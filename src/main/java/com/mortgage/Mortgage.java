@@ -1,5 +1,3 @@
-package mortgagetools;
-
 /**
  * Represents a simple Mortgage object which contains balance, rate,
  * payment, escrow and maturity date.
@@ -12,6 +10,9 @@ package mortgagetools;
  * Author: Aaron Lindsay
  * Date: June 14, 2025
  */
+package com.mortgage;
+
+
 
 import java.text.NumberFormat;
 import java.time.LocalDate;

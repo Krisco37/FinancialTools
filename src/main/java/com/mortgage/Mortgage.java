@@ -30,8 +30,6 @@ public class Mortgage {
 	protected double escrow;	
 	protected LocalDate maturityDate;
 	DateTimeFormatter maturityDateFormatter = DateTimeFormatter.ofPattern("MM/yyyy");
-
-
 	
     /**
      * Constructs a Mortgage object with a given balance, rate, payment, escrow, and maturityDate.
@@ -110,7 +108,6 @@ public class Mortgage {
 	    YearMonth ym = YearMonth.parse(newMaturityDate, maturityDateFormatter);
 	    this.maturityDate = ym.atDay(1);
 	}
-	
 	
 	//Calculates and returns total number of payments left
 	public long NumberOfPayments() {

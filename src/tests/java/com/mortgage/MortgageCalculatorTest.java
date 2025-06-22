@@ -1,11 +1,8 @@
 package com.mortgage;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
-
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import com.mortgage.Mortgage.MortgageCalculator;
 
 class MortgageCalculatorTest {
 
@@ -42,4 +39,16 @@ class MortgageCalculatorTest {
         double expectedPayment = 943.56;
         assertEquals(expectedPayment, monthlyPayment, 0.01, "Short-term loan calculation mismatch");
     }
+    
+    @Test
+    void testCalculateMonthlyPaymentConstructor() {
+        // Create an instance of MortgageCalculator
+        MortgageCalculator calculator = new MortgageCalculator();
+
+        // Assume there's a method like calculateMonthlyPayment()
+        double result = calculator.calculateMonthlyPayment(200000, 5, 30);
+
+        // Validate expected behavior
+        assertEquals(1073.64, result, 0.01);
+    }    
 }
